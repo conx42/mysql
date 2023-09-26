@@ -1,0 +1,55 @@
+// use this
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run MySQL Script",
+            "type": "shell",
+            "command": "mysql",
+            "args": [
+                "-u",
+                "root",
+                "-proot",
+                "-e",
+                "source ${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
+// or this
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Run MySQL Script",
+        "type": "shell",
+        "command": "mysql",
+        "args": [
+          "-u",
+          "root",
+          "-proot",
+          "-e",
+          "source ${file}"
+        ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "shared"
+        }
+      }
+    ]
+  }
+  
+//   after that use ctrl+sift+b --> then --> Run MySQL Script ❤️

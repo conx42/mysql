@@ -1,0 +1,6 @@
+{
+    "code-runner.executorMap": {
+        "java": "cd $dir && javac -d bytecodes $fileName && java -cp bytecodes $fileNameWithoutExt",
+        "sql": "cd $dir && mysql.exe -u root -proot -e 'source $fileName'"
+    }
+}
